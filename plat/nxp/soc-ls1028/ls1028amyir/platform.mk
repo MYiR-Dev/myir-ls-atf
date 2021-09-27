@@ -7,7 +7,7 @@
 
 # board-specific build parameters
 BOOT_MODE	:= 	flexspi_nor
-BOARD		:=	myir
+BOARD		:=	amyir
 
  # get SoC common build parameters
 include plat/nxp/soc-ls1028/soc.mk
