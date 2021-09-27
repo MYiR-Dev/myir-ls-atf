@@ -24,7 +24,7 @@
 const struct ddr_cfg_regs static_1600 = {
 	.cs[0].config = 0x80040422,
 	.cs[0].bnds = 0xFF,
-	.sdram_cfg[0] = 0xE50C0004,
+	.sdram_cfg[0] = 0xC50C0004,
 	.sdram_cfg[1] = 0x401100,
 	.timing_cfg[0] = 0x91550018,
 	.timing_cfg[1] = 0xBAB40C42,
@@ -112,7 +112,7 @@ struct dimm_params ddr_raw_timing = {
 	.n_row_addr = 16,
 	.n_col_addr = 10,
 	.bank_group_bits = 1,
-	.edc_config = 2,
+	.edc_config = 0,
 	.burst_lengths_bitmask = 0x0c,  /* MYIR ADD:need check*/
 	.tckmin_x_ps = 750,
 	.tckmax_ps = 1900,
