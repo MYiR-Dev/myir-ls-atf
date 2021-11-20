@@ -167,42 +167,13 @@
  */
 
 /*
- * The number of regions like RO(code), coherent and data required by
- * different BL stages which need to be mapped in the MMU.
- */
-#define ARM_IRQ_SEC_SGI_0		8
-#define ARM_IRQ_SEC_SGI_1		9
-#define ARM_IRQ_SEC_SGI_2		10
-#define ARM_IRQ_SEC_SGI_3		11
-#define ARM_IRQ_SEC_SGI_4		12
-#define ARM_IRQ_SEC_SGI_5		13
-#define ARM_IRQ_SEC_SGI_6		14
-#define ARM_IRQ_SEC_SGI_7		15
-
-/*
  * Define properties of Group 1 Secure and Group 0 interrupts as per GICv3
  * terminology. On a GICv2 system or mode, the lists will be merged and treated
  * as Group 0 interrupts.
  */
 #define PLAT_LS_G1S_IRQ_PROPS(grp) \
 	INTR_PROP_DESC(BL32_IRQ_SEC_PHY_TIMER, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_LEVEL), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_0, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_1, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_2, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_3, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_4, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_5, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_6, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE), \
-	INTR_PROP_DESC(ARM_IRQ_SEC_SGI_7, GIC_HIGHEST_SEC_PRIORITY, grp, \
-			GIC_INTR_CFG_EDGE)
+			GIC_INTR_CFG_LEVEL)
 
 #define PLAT_LS_G0_IRQ_PROPS(grp)
 
