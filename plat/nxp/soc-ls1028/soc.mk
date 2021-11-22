@@ -10,8 +10,11 @@
 SOC		:=	ls1028
 PLAT_PATH	:=	plat/nxp
 PLAT_SOC_PATH	:=	${PLAT_PATH}/soc-${SOC}
+ifeq (${PLAT},mydjls1028)
+BOARD_PATH      :=      ${PLAT_SOC_PATH}/${BOARD}
+else
 BOARD_PATH	:=	${PLAT_SOC_PATH}/${SOC}${BOARD}
-
+endif
  # get SoC-specific defnitions
 include ${PLAT_SOC_PATH}/soc.def
 
